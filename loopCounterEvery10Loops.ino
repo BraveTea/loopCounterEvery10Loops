@@ -1,5 +1,7 @@
 long randNumber;
-int bandWidth = 1000;
+long bandWidth = 1000;
+int repeat = 10;
+int interval = 500;
 
 void setup()
 {
@@ -13,25 +15,13 @@ void loop()
     randNumber = random(bandWidth);
     Serial.println(randNumber);
 
-    if (count % 10 == 9)
+    if (count % repeat == repeat - 1)
     {
       Serial.print("count = ");
       Serial.println(count+1);
       
     }
-    delay(500);
+    delay(interval);
   }
-  
-  
 }
-
-/*  if (count <= count % 100)
-    {
-
-    }
-    else
-    {
-      Serial.print("count = ");
-      Serial.println(count++);
-      delay(100);
-*/
+ 
